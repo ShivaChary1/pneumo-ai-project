@@ -23,6 +23,10 @@ def preprocess_image(image: Image.Image, target_size: tuple):
     image = image / 255.0  # Rescale the image
     return image
 
+@app.route('/')
+def home():
+    return "Hi"
+
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
